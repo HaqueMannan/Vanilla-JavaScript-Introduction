@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Introduction to Javascript - Global and Local Scope</title>
+    </head>
+
+    <body>
+        
+        <script>
+            //Global Scope - variable firstName is in the Global scope and can be called outside functions as well as within different functions. 
+            var firstName = "John"
+
+            function myFunction(){
+                document.write(firstName);
+            }
+
+            //Local Scope - variable lastName is in the local scope of the function myFunction2 but canot be used outside this function or by any other functions. Variables within local scope can only be used within the function it is declared in, hence considered local scoped.
+
+            function myFunction2(){
+                var lastName = "Doe"
+                document.write(lastName);
+            }
+
+            document.write(lastName)
+        </script>
+
+    </body>
+</html>
