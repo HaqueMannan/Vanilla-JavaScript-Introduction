@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Introduction to Javascript - Objects and Methods</title>
+    </head>
+
+    <body>
+        <script>
+            // Example of an Objec with Properties.
+            var person = {
+                firstname: "John",
+                lastname: "Doe",
+                age: 25
+            };
+            //Example of accessing an object's property.
+            // document.write(person.firstname);
+            // document.write(person.firstname + " " + person.lastname);
+
+            // Example of a Method.
+            var person2 = {
+                firstname: "John",
+                lastname: "Doe",
+                age: 25,
+                fullName: function(){
+                    document.write(this.firstname + " " + this.lastname);
+                }
+            };
+            person2.fullName();
+
+            //Preferred way of writing the above Method using the return keyword.
+            var person3 = {
+                firstname: "John", 
+                lastname: "Doe", 
+                age: 35,
+                fullName: function(){
+                    return this.firstname + " " + this.lastname;
+                }
+            };
+            document.write(person3.fullName());
+        </script>
+    </body>
+</html>
