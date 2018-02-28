@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Introduction to Javascript - Dates</title>
+    </head>
+
+    <body>
+        <p id=date></p>
+        <p id=date2></p>
+        <p id=date3></p>
+        <p id=date4></p>
+        <p id=date5></p>
+        <p id=date6></p>
+        <p id=date7></p>
+        <p id=date8></p>
+        <p id=date9></p>
+        <p id=date10></p>
+
+        <script>
+            //Date in the Full Format.
+            document.getElementById("date").innerHTML = Date();
+
+            //Creating a date constructor.
+            var dateSelect = new Date();
+            document.getElementById("date2").innerHTML = dateSelect;
+
+//Selecting Specific Dates
+            //Select a specific date using a constructor and milliseconds.
+            var dateSelect2 = new Date(1000);
+            document.getElementById("date3").innerHTML = dateSelect2;
+
+            //Select a specific date using a constructor and dateString.
+            var dateSelect3 = new Date("2018-02-21");
+            document.getElementById("date4").innerHTML = dateSelect3;
+
+            //Select a specific date using a constructor and comma separator.
+            //(year, month, day, hour, minutes, seconds, milliseconds)
+            //00 = January, 01 = February, 02 = March etc.
+            var dateSelect4 = new Date(2018, 02, 01, 22, 05, 00);
+            document.getElementById("date5").innerHTML = dateSelect4;
+
+            //Select a specific date using a constructor and Date and Time.
+            //(year, month, day, T, hour, minutes, seconds, Z)
+            //Z is the same as setting the string .toUTCString() format.
+            var dateSelect5 = new Date("2018-01-31T12:30:00Z");
+            document.getElementById("date6").innerHTML = dateSelect5;
+
+            //Select a specific date using a constructor and Short Date.
+            var dateSelect6 = new Date("02/23/2018");
+            document.getElementById("date7").innerHTML = dateSelect6;
+
+            //Select a specific date using a constructor and Long Date.
+            var dateSelect7 = new Date("10 January 2018");
+            document.getElementById("date8").innerHTML = dateSelect7;
+
+//Selecting Specific Dates
+            //Format date using .toUTCString() method.
+            var dateSelect8 = new Date("2018-02-28");
+            document.getElementById("date9").innerHTML = dateSelect8.toUTCString();
+
+            //Format date using .toDateString() method.
+            var dateSelect9 = new Date("2018-02-28");
+            document.getElementById("date10").innerHTML = dateSelect9.toDateString();
+        </script>
+    </body>
+</html>
