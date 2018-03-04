@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Introduction to Javascript - Dates</title>
+    </head>
+
+    <body>
+        <p id="Array"></p>
+        <p id="Array2"></p>
+        <p id="Array3"></p>
+        <p id="Array4"></p>
+        <p id="Array5"></p>
+        <p id="Array6"></p>
+        <p id="Array7"></p>
+        <p id="Array8"></p>
+        <p id="Array9"></p>
+
+        <Script>
+            // Creating an Array variable
+            var names = ["Willian", "Anna", "Jack"];
+            var names2 = ["Willian", "Anna", "Jack"];
+            var names3 = ["Willian", "Anna", "Jack", "Emily", "Kate"];
+            var names4 = ["Willian", "Anna", "Jack", "Emily", "Kate"];
+
+            document.getElementById("Array").innerHTML = "Data in Array: " + names[0] + ", " + names[1] + ", " + names[2];
+
+            // Delete the last data within an Array
+            // names.pop();
+            // document.getElementById("Array2").innerHTML = names[2];
+
+            // pop() function into a variable to display the data deleted
+            var x = names.pop();
+            document.getElementById("Array2").innerHTML = "The deleted data is: " + x;
+
+            // Delete the first data within an Array
+            // names.shift();
+            // document.getElementById("Array3").innerHTML = names[0];
+
+            // shift() function into a variable to display the data deleted
+            var y = names.shift();
+            document.getElementById("Array3").innerHTML = "The deleted data is: " + y;
+
+            // Inserting Data into an Array
+            names2.push("Emily");
+            document.getElementById("Array4").innerHTML = "Data in Array: " + names2[0] + ", " + names2[1] + ", " + names2[2] + ", " + names2[3];
+            
+            // push() function into a variable to display the total data within the array.
+            // var z = names2.push("Emily");
+            // document.getElementById("Array4").innerHTML = "The number of data within the array = " + z;
+
+            // Insert data at the beginning of the array
+            names2.unshift("Emily");
+            document.getElementById("Array5").innerHTML = "The new inserted data at the beginning of the Array: " + names2[0]
+
+            // Change Data within an Array
+            names2[1] = "Panda";
+            document.getElementById("Array6").innerHTML = "The updated data in the Array: " + names2[1]
+
+            // Splicing Data in an Array
+            document.getElementById("Array7").innerHTML = "Data in Array: " + names3[0] + ", " + names3[1] + ", " + names3[2] + ", " + names3[3] + ", " + names3[4];
+
+            names3.splice(2, 0, "Panda", "Peter", "Beth")
+            document.getElementById("Array8").innerHTML = "Splice Data in Array: " + names3[0] + ", " + names3[1] + ", " + names3[2] + ", " + names3[3] + ", " + names3[4] + ", " + names3[5] + ", " + names3[6] + ", " + names3[7];
+            //Note: we can achieve the same results with the below code but this does not add spaces after the comma to separate the names.
+            //document.getElementById("Array8").innerHTML = names3
+
+            //The below code allows us to remove data and insert new ones from the index position i.e. we would remove Anna and Jack from the array and insert Panda, Peter and Beth to the array.
+            names4.splice(2, 2, "Panda", "Peter", "Beth")
+            document.getElementById("Array9").innerHTML = "Splice Data in Array: " + names4[0] + ", " + names4[1] + ", " + names4[2] + ", " + names4[3] + ", " + names4[4] + ", " + names4[5];
+        </Script>
+    </body>
+</html>
