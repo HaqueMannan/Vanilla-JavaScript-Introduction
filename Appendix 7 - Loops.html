@@ -13,6 +13,13 @@
         <p id="forLoops3"></p>
         <p id="forLoops4"></p>
 
+        <p id="forInLoops1"></p>
+
+        <p id="whileLoops1"></p>
+        <p id="whileLoops2"></p>
+
+        <p id="doWhileLoops1"></p>
+
         <script>
             // For Loops
 
@@ -22,7 +29,7 @@
             // Print out value i each time it loops through the code.
             for(var i = 0; i < 5; i++){
                 text = text + i;
-            }
+            };
 
             document.getElementById("forLoops1").innerHTML = text;
 
@@ -34,7 +41,7 @@
             // Substituting 5 with name.length value to print out i through loop.
             for(var i = 0; i < names.length; i++){
                 text2 += i;
-            }
+            };
 
             document.getElementById("forLoops2").innerHTML = text2;
 
@@ -46,7 +53,7 @@
             // Print the array names using the for loop
             for(var i = 0; i < names2.length; i++) {
                 text3 += names2[i] + "<br>";
-            }
+            };
 
             document.getElementById("forLoops3").innerHTML = text3;
 
@@ -55,15 +62,76 @@
             // Example 3:
             var names3 = ["Daniel", "Mark", "Amy", "Salma", "Dave"];
             var text4 = "";
-            var i = 0
+            var i = 0;
 
             // Print the array names using the for loop
             for(; i < names3.length;) {
                 text4 += names3[i] + "<br>";
                 i++;
-            }
+            };
 
             document.getElementById("forLoops4").innerHTML = text4;
+        </script>
+
+        <script>
+            // For/In Loops
+            var text5 = "";
+
+            var persons = {
+                name: "Bob",
+                gender: "Male",
+                hairColor: "Black",
+                eyeColor: "Brown"
+            };
+
+            // Loop through the object data using variable to increment automatically based on the number of properties within the object.
+            for (var x in persons) {
+                text5 += persons[x] + "<br>";
+            };
+
+            document.getElementById("forInLoops1").innerHTML = text5;
+        </script>
+
+        <script>
+            // While Loops
+            // Example 1
+            var text6 = "";
+            var x = 0;
+
+            // Loop through the code block if the statement is true.
+            while (x < 10) {
+                text6 += x + "<br>";
+                x++;
+            };
+
+            document.getElementById("whileLoops1").innerHTML = text6;
+
+
+            // Example 2
+            var personList = ["Piper", "Ellen", "Sasha", "Amber"];
+            var text7 = "";
+            var x = 0;
+
+            while(x < personList.length) {
+                text7 += personList[x] + "<br>"
+                x++;
+            };
+
+            document.getElementById("whileLoops2").innerHTML = text7;
+        </script>
+
+        <script>
+            // Do/While Loops
+            var text8 = "";
+            x = 0;
+            
+            //Execute the code first then test the while loop.
+            do {
+                text8 += x + "<br>";
+                x++;
+            } while (x < 10);
+
+            document.getElementById("doWhileLoops1").innerHTML = text8;
         </script>
     </body>
 </html>
