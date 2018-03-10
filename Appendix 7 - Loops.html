@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Introduction to Javascript - Loops</title>
+    </head>
+
+    <body>
+        <p id="forLoops1"></p>
+        <p id="forLoops2"></p>
+        <p id="forLoops3"></p>
+        <p id="forLoops4"></p>
+
+        <script>
+            // For Loops
+
+            // Example 1:
+            var text = "";
+
+            // Print out value i each time it loops through the code.
+            for(var i = 0; i < 5; i++){
+                text = text + i;
+            }
+
+            document.getElementById("forLoops1").innerHTML = text;
+
+
+            // Example 2:
+            var text2 = "";
+            var names = ["Daniel", "Mark", "Amy", "Salma", "Dave"];
+
+            // Substituting 5 with name.length value to print out i through loop.
+            for(var i = 0; i < names.length; i++){
+                text2 += i;
+            }
+
+            document.getElementById("forLoops2").innerHTML = text2;
+
+
+            // Example 3:
+            var names2 = ["Daniel", "Mark", "Amy", "Salma", "Dave"];
+            var text3 = "";
+
+            // Print the array names using the for loop
+            for(var i = 0; i < names2.length; i++) {
+                text3 += names2[i] + "<br>";
+            }
+
+            document.getElementById("forLoops3").innerHTML = text3;
+
+
+            // Example 4:
+            // Example 3:
+            var names3 = ["Daniel", "Mark", "Amy", "Salma", "Dave"];
+            var text4 = "";
+            var i = 0
+
+            // Print the array names using the for loop
+            for(; i < names3.length;) {
+                text4 += names3[i] + "<br>";
+                i++;
+            }
+
+            document.getElementById("forLoops4").innerHTML = text4;
+        </script>
+    </body>
+</html>
